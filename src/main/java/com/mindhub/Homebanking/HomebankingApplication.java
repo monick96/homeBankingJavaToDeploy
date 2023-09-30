@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
+//@SpringBootApplication(scanBasePackages = "com.mindhub.Homebanking")
 public class HomebankingApplication {
 
 	public static void main(String[] args) {
