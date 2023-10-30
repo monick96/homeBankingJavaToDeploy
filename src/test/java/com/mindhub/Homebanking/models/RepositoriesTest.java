@@ -162,9 +162,9 @@ public class RepositoriesTest {
     public void testSaveTransactions() {
 
         // Create a fictitious transactions
-        Transaction transaction1 = new Transaction(TransactionType.DEBIT, 500.0, "GOOGLE services", LocalDateTime.now().plusDays(1));
-        Transaction transaction2 = new Transaction(TransactionType.DEBIT, 600.0, "GOOGLE services", LocalDateTime.now().plusDays(1));
-        Transaction transaction3 = new Transaction(TransactionType.DEBIT, 800.0, "GOOGLE services", LocalDateTime.now().plusHours(5));
+        Transaction transaction1 = new Transaction(TransactionType.DEBIT, 500.0, "GOOGLE services", LocalDateTime.now().plusDays(1),true);
+        Transaction transaction2 = new Transaction(TransactionType.DEBIT, 600.0, "GOOGLE services", LocalDateTime.now().plusDays(1),true);
+        Transaction transaction3 = new Transaction(TransactionType.DEBIT, 800.0, "GOOGLE services", LocalDateTime.now().plusHours(5),true);
 
         transactionRepository.save(transaction1);
         transactionRepository.save(transaction2);
@@ -183,7 +183,7 @@ public class RepositoriesTest {
     public void transactionUpdateTest(){
 
         // Create and save transactión
-        Transaction transaction = new Transaction(TransactionType.DEBIT, 500.0, "Shopping", LocalDateTime.now());
+        Transaction transaction = new Transaction(TransactionType.DEBIT, 500.0, "Shopping", LocalDateTime.now(),true);
         transactionRepository.save(transaction);
 
         // Modify the transaction
